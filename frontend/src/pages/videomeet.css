@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.lobbyContainer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.chatRoom {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #fff;
+  width: 300px;
+  height: 100%;
+  overflow: auto;
+  z-index: 999;
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+
+.conferenceView {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.responsiveVideo,
+.remoteVideo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

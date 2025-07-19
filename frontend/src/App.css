@@ -1,0 +1,244 @@
+/* Reset and base styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background: linear-gradient(120deg, #f9f9f9, #e9f0ff);
+  color: #222;
+}
+
+/* Full page layout */
+.landingPageContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 2rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navHeader h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #222;
+}
+
+.navHeader .highlight {
+  color: #ff9839;
+}
+
+/* Nav Buttons */
+.navlist {
+  display: flex;
+  gap: 1rem;
+}
+
+.navlist button {
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  border: 1px solid #ccc;
+}
+
+.navlist button:hover {
+  background-color: #ff9839;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 152, 57, 0.3);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.landingMainContainer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.textContent {
+  flex: 1;
+  min-width: 280px;
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.textContent h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.connectText {
+  color: #ff9839;
+}
+
+.subText {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.brand {
+  color: #0077ff;
+  font-weight: bold;
+}
+
+/* CTA Button */
+.getStartedBtn a {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  background-color: #ff9839;
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(255, 152, 57, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.getStartedBtn a:hover {
+  background-color: #e8771f;
+  transform: translateY(-3px);
+}
+
+/* Hero Image */
+.imageContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 5s ease-in-out infinite;
+}
+
+.imageContent img {
+  width: 100%;
+  max-width: 980px;
+  transition: transform 0.5s ease;
+}
+
+.imageContent img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .navlist {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: none;
+    gap: 0.8rem;
+  }
+
+  .navlist.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .landingMainContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .textContent h1 {
+    font-size: 2.2rem;
+  }
+
+  .imageContent img {
+    max-width: 300px;
+  }
+}
+
+
+
+/* for home  */
+/* -------------------------------- */
+
+/* ── Brand accent ─────────────────────────────────────────── */
+.brandOr { color:#ff9839; }
+
+/* ── Glass Navbar ─────────────────────────────────────────── */
+.navBarGlass{
+  position:sticky; top:0; z-index:10;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(12px);
+  box-shadow:0 4px 24px rgba(0,0,0,0.05);
+  border-bottom:1px solid rgba(255,255,255,0.3);
+}
+
+/* ── Main hero card ───────────────────────────────────────── */
+.homeCard{
+  border-radius:24px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(4px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+  transition:transform .4s;
+}
+.homeCard:hover{ transform:translateY(-4px); }
+
+/* lift‑up effect on illustration */
+.hoverLift:hover{ transform:translateY(-6px) scale(1.03); }
+
+/* ── Blurred animated background (reuse) ──────────────────── */
+.animatedBg{
+  position:fixed; inset:0;
+  z-index:-1; overflow:hidden;
+  background:radial-gradient(#eef4ff 0%, #f9f9f9 100%);
+}
+.blob{
+  position:absolute; border-radius:50%;
+  opacity:.25; filter:blur(70px);
+  animation:floatBlob 24s ease-in-out infinite;
+}
+.blob.b1{ width:460px; height:460px; background:#ff9839; top:5%;  left:12%; animation-delay:0s;}
+.blob.b2{ width:380px; height:380px; background:#0077ff; top:45%; left:58%; animation-delay:6s;}
+.blob.b3{ width:420px; height:420px; background:#00cc99; top:75%; left:25%; animation-delay:12s;}
+
+@keyframes floatBlob{
+  0%,100%{ transform:scale(1) translateY(0); }
+  50%   { transform:scale(1.15) translateY(-60px); }
+}
+
+/* ── Responsive tweaks ────────────────────────────────────── */
+@media(max-width:900px){
+  .homeCard{ margin-inline:1rem; }
+}
