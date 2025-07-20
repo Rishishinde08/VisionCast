@@ -91,9 +91,7 @@
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.6);
 }
 
-.chatRoom > input{
-    color: white !important;
-}
+
 
 .chatContainer {
   display: flex;
